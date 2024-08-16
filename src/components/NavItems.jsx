@@ -70,7 +70,7 @@ const NavItems = () => {
 
                          {/* Social Toggle (use icofont "searched on google")*/}
                          <div className='ellepsis-bar d-md-none' onClick={() => setSocialTogggle(!socialToggle)}>
-                          <i class="icofont-info-square"></i>
+                          <i className="icofont-info-square"></i>
                          </div>
 
                       </div>
