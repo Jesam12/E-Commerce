@@ -57,6 +57,22 @@ const NavItems = () => {
                         {/* Sign In and Login Area */}
                         <Link to="/sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
                         <Link to="/login" className='d-none d-md-block'>Log In</Link>
+
+                         {/* Menu toggler / Hamburger menu */}
+                         <div>
+                            {/* Note: The onclick functions enables the hamburger menu to click and work */}
+                            <div onClick={()=> setMenuToggle(!menuToggle)} className={`header-bar d-lg-none ${menuToggle ? "active" :""}`}>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                         </div>
+
+                         {/* Social Toggle (use icofont "searched on google")*/}
+                         <div className='ellepsis-bar d-md-none' onClick={() => setSocialTogggle(!socialToggle)}>
+                          <i class="icofont-info-square"></i>
+                         </div>
+
                       </div>
                </div>
             </div>  
