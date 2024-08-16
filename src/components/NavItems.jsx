@@ -30,7 +30,7 @@ const NavItems = () => {
         </div>
 
         {/*Header bottom */}
-         <div className='header-bottom'>
+        <div className='header-bottom'>
             <div className='container'>
                 <div className='header-wrapper'>
                     {/* logo */}
@@ -41,24 +41,26 @@ const NavItems = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>  
 
-        {/* Menu area */}
-        <div className='menu-area'>
-            <div className='menu'>
-                <ul className={`lab-ul ${menuToggle ? "active" : ""}`}>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/shop">Shop</Link></li>
-                    <li><Link to="/blog">Blog</Link></li>
-                    <li><Link to="/about">About</Link></li>
-                    <li><Link to="/contact">Contact</Link></li>
-                </ul>
+                    {/* Menu area */}
+                      <div className='menu-area'>
+                        <div className='menu'>
+                            <ul className={`lab-ul ${menuToggle ? "active" : ""}`}>
+                                <li><Link to="/">Home</Link></li>
+                                <li><Link to="/shop">Shop</Link></li>
+                                <li><Link to="/blog">Blog</Link></li>
+                                <li><Link to="/about">About</Link></li>
+                                <li><Link to="/contact">Contact</Link></li>
+                            </ul>
+                        </div>    
 
-                <Link to="sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
-            </div>
-        </div>
+                        {/* Sign In and Login Area */}
+                        <Link to="/sign-up" className='lab-btn me-3 d-none d-md-block'>Create Account</Link>
+                        <Link to="/login" className='d-none d-md-block'>Log In</Link>
+                      </div>
+               </div>
+            </div>  
+       </div>
     </header>
   )
 }
