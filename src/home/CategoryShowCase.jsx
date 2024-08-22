@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Rating from '../components/Rating';
 
     const title = "Our Products";
 
@@ -80,14 +81,16 @@ import React, { useState } from 'react'
 
    const CategoryShowCase = () => {
     const [items, setItems] = useState(ProductData);
+    // Category based filtering
+    const filterItem = () => {}
     return (
         <div className='course-section style-3 padding-tb'>
         {/* Shapes */}    
-            <div>
-                <img className="course-shape one" src="/src/assests/images/shape-img/icon/001.png" alt="" />
+            <div className="course-shape one">
+                <img src="/src/assests/images/shape-img/icon/001.png" alt="" />
             </div>
-            <div>
-                <img className="course-shape one" src="/src/assests/images/shape-img/icon/02.png" alt="" />
+            <div className="course-shape one">
+                <img src="/src/assests/images/shape-img/icon/02.png" alt="" />
             </div>
 
             {/* Main section */}
@@ -95,6 +98,40 @@ import React, { useState } from 'react'
                 {/* Section header */}
                 <div className='section-header'>
                     <h2 className='title'>{title}</h2>
+                    <div className='course-filter-group'>
+                        <ul className='lab-ul'>
+                            <li onClick={() => filterItem("All")}>All</li>
+                            <li onClick={() => filterItem("Shoes")}>Shoes</li>
+                            <li onClick={() => filterItem("Bags")}>Bags</li>
+                            <li onClick={() => filterItem("Phones")}>Phones</li>
+                            <li onClick={() => filterItem("Beauty")}>Beauty</li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/* Section Body */}
+                <div className='section-wrapper'>
+                    <div>
+                        {
+                            items.map((product) => <div key={product.id} className='col'>
+                                <div className='course-item style-4'>
+                                    <div className='course-inner'>
+                                        <div className='course-thubm'>
+                                            <img src={product.imgUrl} alt="" />
+                                            <div className='course-category'>
+                                                <div className='course-cate'>
+                                                    <a href="#">{product.cate}</a>
+                                                </div>
+                                                <div className='course-review'>
+                                                    <Rating/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>)
+                        }
+                    </div>
                 </div>
             </div>
         </div>
