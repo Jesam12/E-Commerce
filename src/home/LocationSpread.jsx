@@ -9,37 +9,37 @@ const clientsList = [
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From Dubai',
 },
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From Egypt',
 },
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From Saudi',
 },
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From China',
 },
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From USA',
 },
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From Ghana',
 },
 {
 imgUrl: '/src/assets/images/clients/avater.jpg',
 imgAlt: 'education thumb rajibraj91 rajibraj',
-text: 'Join with Us',
+text: 'From Nigeria',
 },
 ]
 
@@ -61,6 +61,9 @@ const LocationSpread = () => {
                             <Link to="/sign-up" className='client-content'>
                                 <span>{val.text}</span>
                             </Link>
+                            <div className='client-thumb'>
+                                <img src={val.imgUrl} alt="" />
+                            </div>
                         </div>
                     ))
                 }
